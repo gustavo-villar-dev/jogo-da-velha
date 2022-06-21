@@ -6,8 +6,6 @@
 */
 
 #include <stdio.h>
-#include <conio.h>
-#include <windows.h>
 #include <stdlib.h>
 
 /*posicoes do jogo da velha. os nove quadrados possiveis*/
@@ -20,13 +18,14 @@ int main(void){
     int escolha; 
     int jogador = 1; /*mantem controle sobre qual jogador esta jogando*/
     char marca; /* X or O */
+    int verify;
 
     do {
         fflush(stdin);
         desenharTabuleiro();
         jogador = (jogador % 2) ? 1 : 2;
         printf(">> Jogador %d, sua escolha: ", jogador);
-        scanf("%d",&escolha);
+        verify = scanf("%d",&escolha);
 
         marca = (jogador==1) ? 'X' : 'O'; /*se for o jogador 1 entao marca X, senao marca O*/
 
@@ -37,7 +36,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -47,7 +46,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -57,7 +56,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -67,7 +66,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -77,7 +76,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -87,7 +86,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -97,7 +96,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -107,7 +106,7 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
@@ -117,14 +116,14 @@ int main(void){
                 else{
                     printf("\n\t>> Opcao invalida! Pressione ENTER!");
                     jogador--; /*repetira a jogada do jogador atual*/
-                    getch();
+                    getchar();
                 }
                 break;
 
             default:
                 printf("\n\t>> Opcao invalida! Pressione ENTER!");
                 jogador--; /*repetira a jogada do jogador atual*/
-                getch();
+                getchar();
             }
 
             progresso = verificarVitoria();
@@ -145,7 +144,7 @@ int main(void){
         printf(">> O jogo empatou.");
     }
 
-    getch();
+    getchar();
     return 0;
 }
 
@@ -186,8 +185,9 @@ int verificarVitoria(){
 
 void desenharTabuleiro()
 {
+    int verify;
 
-    system("cls");
+    verify = system("cls");
     printf("\n\n\t Jogo da Velha \n\n");
     printf("Jogador 1 (X) - Jogador 2 (O) \n\n\n");
 
