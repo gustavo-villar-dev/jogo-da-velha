@@ -8,9 +8,9 @@ O jogo roda no terminal, e na versão Windows, utiliza bibliotecas que não devi
 
 
 ## Windows
-O arquivo tictactoe.c é a versão adequada para o Windows.
+O arquivo tictactoeWindows.c é a versão adequada para o Windows.
 
-gcc tictactoe.c -O2 -pipe -o tictactoe
+gcc tictactoeWindows.c -O2 -pipe -o tictactoe
 
 tictactoe
 
