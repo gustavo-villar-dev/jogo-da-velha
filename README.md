@@ -1,6 +1,8 @@
 # Jogo da Velha em C 
 
-Meu approach pra construir o famoso jogo da velha. Código produzido em um periódo de 45 minutos.
+Meu approach pra construir o famoso jogo da velha. 
+
+Código produzido em um periódo de 45 minutos.
 
 O jogo roda no terminal, e na versão Windows, utiliza bibliotecas que não devia.
 
